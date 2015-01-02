@@ -21,6 +21,12 @@ class BrewDepsGroup < Formula
             end
         end
 
+        ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python2.7/site-packages"
+        system "python", *Language::Python.setup_install_args(libexec)
+
+        bin.install Dir[libexec/"bin/*"]
+        bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+
         bin.install 'brew-deps-group.py'
         bin.install 'brew-deps-group.rb'
         (bin + 'brew-deps-group.py').chmod 0755
