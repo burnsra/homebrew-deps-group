@@ -8,7 +8,7 @@ class BrewDepsGroup < Formula
 
     resource "networkx" do
         url "https://pypi.python.org/packages/source/n/networkx/networkx-1.9.1.tar.gz"
-        # md5 "a2d9ee8427c5636426f319968e0af9f2"
+        sha1 "ac2db3b29c7c4d16435f2a7ebe90fc8bd687b59c"
     end
 
     skip_clean "bin"
