@@ -30,6 +30,8 @@ $ brew deps-group
 ['ossp-uuid']
 ```
 
+Use option `-a` or `--all` to show all packages in each group.
+
 It is best to use `deps-group` with [`rmtree`](https://github.com/beeftornado/homebrew-rmtree). After running `deps group`, you can safely assume that each group (represented by each line) and its dependencies are not associated with other group.
 
 Warning
