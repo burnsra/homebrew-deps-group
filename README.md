@@ -4,8 +4,7 @@ homebrew-deps-group
  Show dependencies based on intersection of dependencies of each package installed.
 
  What is it?
- ---------
-
+------------
  It is an external command for Homebrew that provides a new command `deps-group`. Homebrew built-in command `deps` shows all the dependencies for each package installed. However, it is still cumbersome to actually need to manually check whether each package in the dependencies is related to some other package. In other words, a single package might be used by multiple packages and vice versa. In order to properly remove some package, user has to use combination of commands `deps` and `uses` to ensure safe removal of each package.
 
  `deps-group` actually groups all the **top-level** packages in which its dependencies are related to each other. If you have taken graph theory before, `deps-group` is looking for *connected components*.
