@@ -19,11 +19,11 @@ module BrewDepsGroup
     end
 
     if ['-a', '--all'].include? ARGV.first
-      system "python", "brew-deps-group.py", "all"
+      system "brew-deps-group.py", "all"
     end
 
     if ARGV.empty?
-      system "python", "brew-deps-group.py", "top"
+      system "brew-deps-group.py", "top"
     end
   end
 end
