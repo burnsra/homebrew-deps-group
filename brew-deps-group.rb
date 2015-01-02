@@ -12,10 +12,21 @@ module BrewDepsGroup
 
   module_function
 
-  def depsGroup
-    system "python", "brew-deps-group.py"
+  def run
+    if ['-h', '?', '--help'].include? ARGV.first
+      puts USAGE
+      exit 0
+    end
+
+    if ['-a', '--all'].include? ARGV.first
+      system "python", "brew-deps-group.py", "all"
+    end
+
+    if ARGV.empty?
+      system "python", "brew-deps-group.py", "top"
+    end
   end
 end
 
-BrewDepsGroup.depsGroup
+BrewDepsGroup.run
 exit 0
