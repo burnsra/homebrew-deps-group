@@ -13,7 +13,7 @@ module BrewDepsGroup
   module_function
 
   def depsGroup
-    system "python", "#{bin}/brew-deps-group.py"
+    system "python", "brew-deps-group.py"
   end
 end
 
